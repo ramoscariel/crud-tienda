@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items</title>
+</head>
+<body>
+    <h1>Items</h1>
+    <a href="/create">Crear Item</a>
+    <ul>
+        <% items.forEach(item => { %>
+            <li>
+                <strong><%= item.nombre %></strong> - $<%= item.precio %>
+                <p><%= item.descripcion %></p>
+                <a href="/edit/<%= item.id %>">Editar</a> | 
+                <a href="/delete/<%= item.id %>">Borrar</a>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

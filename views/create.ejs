@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Item</title>
+</head>
+<body>
+    <h1>Crear Item</h1>
+    <form action="/create" method="POST">
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" required><br>
+        
+        <label for="price">Precio</label>
+        <input type="number" step="0.01" name="price" id="price" required><br>
+        
+        <label for="description">Descripcion</label>
+        <textarea name="description" id="description"></textarea><br>
+        
+        <button type="submit">Crear</button>
+    </form>
+    <a href="/">Regresar</a>
+</body>
+</html>
