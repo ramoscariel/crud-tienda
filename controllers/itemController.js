@@ -33,7 +33,7 @@ exports.showEditItem = (req, res) => {
   };
   
 // actualizar item
-  exports.updateItem = (req, res) => {
+exports.updateItem = (req, res) => {
     const id = req.params.id;
     const { name, price, description } = req.body;
     Item.update(id, { name, price, description }, (err) => {
@@ -43,7 +43,7 @@ exports.showEditItem = (req, res) => {
   };
   
 // borrar item
-  exports.deleteItem = (req, res) => {
+exports.deleteItem = (req, res) => {
     const id = req.params.id;
     Item.delete(id, (err) => {
       if (err) throw err;
